@@ -21,3 +21,29 @@ imageInput.addEventListener("change", function () {
 
     status.textContent = "Image loaded.";
 });
+
+const pngButton = document.getElementById("pngButton");
+const jpgButton = document.getElementById("jpgButton");
+const selectedFormat = document.getElementById("selectedFormat");
+
+let selectedFormatValue = "png";
+
+pngButton.classList.add("selected");
+
+pngButton.addEventListener("click", function () {
+    selectedFormatValue = "png";
+
+    pngButton.classList.add("selected");
+    jpgButton.classList.remove("selected");
+
+    selectedFormat.textContent = "PNG selected";
+});
+
+jpgButton.addEventListener("click", function () {
+    selectedFormatValue = "jpg";
+
+    jpgButton.classList.add("selected");
+    pngButton.classList.remove("selected");
+
+    selectedFormat.textContent = "JPG selected";
+});
