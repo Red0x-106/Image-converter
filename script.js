@@ -89,3 +89,27 @@ convertButton.addEventListener("click", function () {
 
     image.src = URL.createObjectURL(file);
 });
+
+const downloadButton = document.getElementById("downloadButton");
+
+downloadButton.addEventListener("click", function () {
+
+    if (!convertedImage) {
+        status.textContent = "Convert the image first.";
+        return;
+    }
+
+    const link = document.createElement("a");
+
+    link.href = convertedImage;
+
+    if (selectedFormatValue === "png") {
+        link.download = "converted-image.png";
+    } else {
+        link.download = "converted-image.jpg";
+    }
+
+    link.click();
+
+    status.textContent = "Download started.";
+});
