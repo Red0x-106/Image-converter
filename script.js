@@ -10,6 +10,7 @@ const selectedFormat = document.getElementById("selectedFormat");
 
 const convertButton = document.getElementById("convertButton");
 const downloadButton = document.getElementById("downloadButton");
+const clearButton = document.getElementById("clearButton");
 
 let selectedFormatValue = "png";
 let convertedImage = null;
@@ -31,6 +32,9 @@ imageInput.addEventListener("change", function () {
     previewImage.src = imageURL;
     previewImage.style.display = "block";
     previewText.style.display = "none";
+
+    convertedImage = null;
+    downloadButton.disabled = true;
 
     status.textContent = "Image loaded.";
 });
@@ -115,4 +119,27 @@ downloadButton.addEventListener("click", function () {
     link.click();
 
     status.textContent = "Download started.";
+});
+
+clearButton.addEventListener("click", function () {
+
+    imageInput.value = "";
+
+    previewImage.src = "";
+    previewImage.style.display = "none";
+    previewText.style.display = "block";
+
+    fileName.textContent = "No file selected";
+
+    selectedFormatValue = "png";
+
+    pngButton.classList.add("selected");
+    jpgButton.classList.remove("selected");
+
+    selectedFormat.textContent = "PNG selected";
+
+    convertedImage = null;
+    downloadButton.disabled = true;
+
+    status.textContent = "Cleared.";
 });
