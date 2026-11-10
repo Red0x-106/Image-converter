@@ -3,12 +3,14 @@
 What is Image Converter?
 
 It's a site where you can convert your images from jpg to png or png to jpg.
+ https://red0x-106.github.io/Image-converter/
+
 
 
 <img width="1919" height="911" alt="image" src="https://github.com/user-attachments/assets/7276d60e-3354-45a1-86df-c1b04fb30ccc" />
 
 
-#Features
+##Features
 
 - Upload JPG/PNG
   
@@ -28,19 +30,19 @@ It's a site where you can convert your images from jpg to png or png to jpg.
 -  <img width="1919" height="916" alt="image" src="https://github.com/user-attachments/assets/3e172d7e-266a-4abb-a208-cf61e1d07c7e" />
   
 
-#What I Used
+##What I Used
 - HTML
 - CSS
 - JavaScript
 
-#How I Made It
+##How I Made It
 I made it mostly focusing on the javascript and the explanation of the site
 and about pnh and jpg files
 
 <img width="1919" height="911" alt="image" src="https://github.com/user-attachments/assets/6d7f1d21-e99a-4ff9-a92b-96cd5386a284" />
 
 
-#What I Learned
+##What I Learned
 
 I learned how to make files insert, download and also to convert them.
 
