@@ -47,3 +47,45 @@ jpgButton.addEventListener("click", function () {
 
     selectedFormat.textContent = "JPG selected";
 });
+
+const convertButton = document.getElementById("convertButton");
+
+let convertedImage = null;
+
+convertButton.addEventListener("click", function () {
+
+    const file = imageInput.files[0];
+
+    if (!file) {
+        status.textContent = "Please choose an image first.";
+        return;
+    }
+
+    const image = new Image();
+
+    image.onload = function () {
+
+        const canvas = document.createElement("canvas");
+        const context = canvas.getContext("2d");
+
+        canvas.width = image.width;
+        canvas.height = image.height;
+
+        if (selectedFormatValue === "jpg") {
+            context.fillStyle = "white";
+            context.fillRect(0, 0, canvas.width, canvas.height);
+        }
+
+        context.drawImage(image, 0, 0);
+
+        if (selectedFormatValue === "jpg") {
+            convertedImage = canvas.toDataURL("image/jpeg", 0.9);
+        } else {
+            convertedImage = canvas.toDataURL("image/png");
+        }
+
+        status.textContent = "Image converted successfully.";
+    };
+
+    image.src = URL.createObjectURL(file);
+});
