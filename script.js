@@ -4,7 +4,20 @@ const previewText = document.getElementById("previewText");
 const fileName = document.getElementById("fileName");
 const status = document.getElementById("status");
 
+const pngButton = document.getElementById("pngButton");
+const jpgButton = document.getElementById("jpgButton");
+const selectedFormat = document.getElementById("selectedFormat");
+
+const convertButton = document.getElementById("convertButton");
+const downloadButton = document.getElementById("downloadButton");
+
+let selectedFormatValue = "png";
+let convertedImage = null;
+
+pngButton.classList.add("selected");
+
 imageInput.addEventListener("change", function () {
+
     const file = imageInput.files[0];
 
     if (!file) {
@@ -22,15 +35,8 @@ imageInput.addEventListener("change", function () {
     status.textContent = "Image loaded.";
 });
 
-const pngButton = document.getElementById("pngButton");
-const jpgButton = document.getElementById("jpgButton");
-const selectedFormat = document.getElementById("selectedFormat");
-
-let selectedFormatValue = "png";
-
-pngButton.classList.add("selected");
-
 pngButton.addEventListener("click", function () {
+
     selectedFormatValue = "png";
 
     pngButton.classList.add("selected");
@@ -40,6 +46,7 @@ pngButton.addEventListener("click", function () {
 });
 
 jpgButton.addEventListener("click", function () {
+
     selectedFormatValue = "jpg";
 
     jpgButton.classList.add("selected");
@@ -47,10 +54,6 @@ jpgButton.addEventListener("click", function () {
 
     selectedFormat.textContent = "JPG selected";
 });
-
-const convertButton = document.getElementById("convertButton");
-
-let convertedImage = null;
 
 convertButton.addEventListener("click", function () {
 
@@ -84,13 +87,13 @@ convertButton.addEventListener("click", function () {
             convertedImage = canvas.toDataURL("image/png");
         }
 
+        downloadButton.disabled = false;
+
         status.textContent = "Image converted successfully.";
     };
 
     image.src = URL.createObjectURL(file);
 });
-
-const downloadButton = document.getElementById("downloadButton");
 
 downloadButton.addEventListener("click", function () {
 
