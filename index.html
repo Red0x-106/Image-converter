@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Image Converter</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+    <div class="container">
+        <header>
+
+            <h1>Image Converter</h1>
+            <p>Convert your images between JPG and PNG.</p>
+        </header>
+
+        <main>
+            <div class="upload-box">
+                <h2>choose an Image</h2>
+                <p>Upload a JPG or PNG file</p>
+
+                <input type="file" id="imageInput" accept=".jpg, .png, .jpeg">
+
+                <label for="imageInput" class="upload-button">
+                    Choose Image
+                </label>
+
+                <p id="fileName">No file selected</p>
+            </div>
+
+            <div class="preview-box">
+                <h2>Preview</h2>
+                <div class="image-area">
+
+                    <img id="previewImage" src="" alt="Image preview">
+
+                    <p id="previewText">
+                        Your image will appear here.
+                    </p>
+                </div>
+            </div>
+
+            <div class="options">
+
+                <h2>Convert to</h2>
+
+                <div class="format-buttons">
+
+                    <button id="pngButton">PNG</button>
+
+                    <button id="jpgButton">JPG</button>
+                </div>
+
+                <p id="selectedFormat">
+                    PNG selected
+                </p>
+
+
+            </div>
+
+            <div class="actions">
+
+                <button id="convertButton" class="convert-button">
+                    Convert Image
+                </button>
+
+                <button id="downloadButton" class="clear-button">
+                    Clear
+                </button>
+
+
+            </div>
+
+            <p id="status"></p>
+        </main>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
