@@ -56,8 +56,7 @@ main {
 
 .upload-box h2,
 .preview-box h2,
-.options h2,
-.info h2 {
+.options h2 {
     font-size: 20px;
     margin-bottom: 10px;
 }
@@ -143,19 +142,18 @@ main {
 
 .actions {
     display: flex;
-    gap: 10px;
+    gap: 15px;
     flex-wrap: wrap;
 }
 
 .actions button {
-    flex: 1;
-    min-width: 150px;
-    padding: 12px;
+    padding: 12px 25px;
     border: none;
     border-radius: 8px;
     color: white;
     font-size: 15px;
     cursor: pointer;
+    min-width: 150px;
 }
 
 .convert-button {
@@ -196,16 +194,18 @@ main {
 
 .info {
     margin-top: 30px;
+    padding: 30px;
 }
 
 .info h2 {
-    margin-bottom: 15px;
+    font-size: 22px;
+    margin-bottom: 20px;
 }
 
 .info h3 {
     font-size: 18px;
-    margin-top: 25px;
-    margin-bottom: 10px;
+    margin-top: 30px;
+    margin-bottom: 12px;
 }
 
 .info h4 {
@@ -215,31 +215,37 @@ main {
 
 .info p {
     color: #aaa;
-    line-height: 1.6;
+    line-height: 1.7;
+    margin-bottom: 15px;
 }
 
 .format-info {
     display: flex;
     gap: 20px;
     margin-top: 15px;
+    margin-bottom: 20px;
 }
 
 .format-info > div {
     flex: 1;
     background: #22242a;
     border-radius: 10px;
-    padding: 18px;
+    padding: 20px;
 }
 
 .info ul,
 .info ol {
     color: #aaa;
     padding-left: 22px;
-    line-height: 1.8;
+    line-height: 1.9;
 }
 
 .info ol {
     margin-top: 10px;
+}
+
+.info li {
+    margin-bottom: 5px;
 }
 
 @media (max-width: 600px) {
