@@ -6,42 +6,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Image Converter</title>
-    <link rel="stylesheet" href="style.css">
 
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
     <div class="container">
-        <header>
 
+        <header>
             <h1>Image Converter</h1>
             <p>Convert your images between JPG and PNG.</p>
         </header>
 
         <main>
+
             <div class="upload-box">
-                <h2>choose an Image</h2>
+
+                <h2>Choose an image</h2>
+
                 <p>Upload a JPG or PNG file</p>
 
-                <input type="file" id="imageInput" accept=".jpg, .png, .jpeg">
+                <input type="file" id="imageInput" accept=".jpg,.jpeg,.png">
 
                 <label for="imageInput" class="upload-button">
                     Choose Image
                 </label>
 
                 <p id="fileName">No file selected</p>
+
             </div>
 
             <div class="preview-box">
+
                 <h2>Preview</h2>
+
                 <div class="image-area">
-
                     <img id="previewImage" src="" alt="Image preview">
-
-                    <p id="previewText">
-                        Your image will appear here.
-                    </p>
+                    <p id="previewText">Your image will appear here.</p>
                 </div>
+
             </div>
 
             <div class="options">
@@ -51,14 +55,11 @@
                 <div class="format-buttons">
 
                     <button id="pngButton">PNG</button>
-
                     <button id="jpgButton">JPG</button>
+
                 </div>
 
-                <p id="selectedFormat">
-                    PNG selected
-                </p>
-
+                <p id="selectedFormat">PNG selected</p>
 
             </div>
 
@@ -68,19 +69,102 @@
                     Convert Image
                 </button>
 
-                <button id="downloadButton" class="clear-button">
-                    Clear
+                <button id="downloadButton" class="download-button" disabled>
+                    Download
                 </button>
 
+                <button id="clearButton" class="clear-button">
+                    Clear
+                </button>
 
             </div>
 
             <p id="status"></p>
+
         </main>
+
+        <section class="info">
+
+            <h2>JPG and PNG</h2>
+
+            <p>
+                JPG uses lossy compression, which makes files smaller but can reduce
+                image quality. PNG uses lossless compression and can support
+                transparent areas.
+            </p>
+
+            <h3>Why convert JPG to PNG?</h3>
+
+            <p>
+                PNG can be useful for images that contain text, screenshots,
+                diagrams, logos, or graphics where keeping sharp details is
+                important.
+            </p>
+
+            <h3>Keep in mind</h3>
+
+            <p>
+                Converting a JPG to PNG does not restore quality that was already
+                lost from JPG compression. The PNG keeps the image as it currently
+                looks.
+            </p>
+
+            <h3>JPG or PNG?</h3>
+
+            <div class="format-info">
+
+                <div>
+                    <h4>Use JPG for</h4>
+
+                    <ul>
+                        <li>Photographs</li>
+                        <li>Smaller file sizes</li>
+                        <li>Sharing images</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4>Use PNG for</h4>
+
+                    <ul>
+                        <li>Graphics and logos</li>
+                        <li>Screenshots</li>
+                        <li>Images that need transparency</li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <h3>How it works</h3>
+
+            <ol>
+                <li>Choose a JPG or PNG image.</li>
+                <li>Select the format you want.</li>
+                <li>Convert the image.</li>
+                <li>Download the converted image.</li>
+            </ol>
+
+            <h3>Privacy</h3>
+
+            <p>
+                The conversion happens directly in your browser. Your image is
+                not uploaded to a server by this website.
+            </p>
+
+            <h3>About transparency</h3>
+
+            <p>
+                Converting a JPG to PNG does not automatically remove its
+                background. The PNG format can store transparent areas, but
+                removing a background requires an image editing tool.
+            </p>
+
+        </section>
 
     </div>
 
     <script src="script.js"></script>
+
 </body>
 
 </html>
